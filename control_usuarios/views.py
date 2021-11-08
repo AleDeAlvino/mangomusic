@@ -51,5 +51,7 @@ def sign_in_view(request):
     form = ProfileForm()
     return render(request, 'Registro.html', {'form':form})
 
+@login_required
 def home_view(request):
     return render(request, 'Home.html')
+
