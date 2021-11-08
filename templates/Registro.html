@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/Estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Heebo:wght@400;900&family=Roboto:wght@500&family=Zen+Kaku+Gothic+Antique:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Zen+Kaku+Gothic+Antique:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
+    <title>Registro</title>
+</head>
+<body class="general2">
+
+    <div class="barra_a">
+        <div class="boton_mover">
+            <button type="button" class="boton" class="boton" onclick="location.href = '/login'">  Inicio de sesión </button>
+        </div>
+    
+        <div class="ayuda">
+            <h4>Ayuda</h4>
+        </div>
+        
+        <div class="premium">
+            <h4>Premium</h4>
+        </div>
+    
+        <div class="acerca">
+            <h4>Acerda  de </h4>
+        </div>
+    </div>
+
+    <div class="texto5">
+        <h4>Inicia una nueva experiencia con  Mango Music</h4>
+    </div>
+
+    <div class="registro">
+    <form method="POST">
+        {% csrf_token %}
+            <div class="form group">
+                {{ field.errors }}
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Nombre" class="form-control" name="{{form.first_name.name}}"/>
+                <br>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Apellido" class="form-control" name="{{form.last_name.name}}"/>
+                <br>
+            </div>
+
+            <div class="form-group">
+                <label for="start">País:</label>
+                <select name="pais" class="form-control" name="{{form.pais.name}}">
+                    <option>Selecciona una opción</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="España">España</option>
+                    <option value="México">México</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Italia">Italia</option>
+                    <option value="China">China</option>
+                    <option value="Corea del Sur">Corea del Sur</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                </select>
+                <br>
+            </div>
+
+            <div class="form-group">
+                <label for="start">Fecha de Nacimiento:</label>
+                <input type="date" id="start"  min="1950-01-01" max="2022-12-31" class="form-control" name="{{form.fecha_nac.name}}">
+                <br>
+            </div>
+
+            <div class="form-group">
+                <input type="email" placeholder="Correo electronico: mangomail@mail.com" class="form-control" name="{{form.username.name}}"/>
+                <br>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Confirmar Contraseña" class="form-control" name="{{form.password.name}}"/>
+                <br>
+                <br>
+            </div>
+                    {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                        {{ message }}
+                        </li>
+                        {% endfor %}
+                </ul>
+                {% endif %} 
+    </div>
+
+    <div class="boton_mover3">
+        <input type="submit" class="boton3" value="Crear Cuenta">
+    </div>
+
+    </form>
+
+    <div class="texto6">
+        <h5>Consulta las políticas de privacidad </h5>
+    </div>
+    
+</body>
+</html>

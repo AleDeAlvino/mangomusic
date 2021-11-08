@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/Estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Heebo:wght@400;900&family=Roboto:wght@500&family=Zen+Kaku+Gothic+Antique:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Zen+Kaku+Gothic+Antique:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
+    <title> Login </title>
+</head>
+<body class="general3">
+    <div class="boton_mover">
+        <button type="button" class="boton" class="boton2" onclick="location.href = '/sign_in'">  Registrate </button>
+    </div>
+
+    <div class="ayuda">
+        <h4>Ayuda</h4>
+    </div>
+    
+    <div class="premium">
+        <h4>Premium</h4>
+    </div>
+
+    <div class="acerca">
+        <h4>Acerda  de </h4>
+    </div>
+
+    <div class="texto7">
+        <h4>¡ Bienvenido a Mango Music !</h4>
+    </div>
+    
+    <div class="login">
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <input type="text" placeholder="Correo electronico" class="form-control" name="{{form.username.name}}"/>
+                <br> 
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Contraseña" class="form-control" name="{{form.password.name}}"/>
+                <br> 
+            </div>
+            <div class="boton_mover4">
+                <input type="submit" class="boton3" value="Iniciar Sesión">
+            </div>
+        </form>
+    </div>
+
+<div class="texto8">
+    <h5>Crea una cuenta y  escuha a tus artistas favoritos </h5>
+</div>
+
+
+</body>
+</html>
