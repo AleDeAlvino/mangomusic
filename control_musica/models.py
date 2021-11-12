@@ -6,7 +6,7 @@ class Generos(models.Model):
 
 class Artistas(models.Model):
     artista = models.CharField(max_length = 50)
-    seguidores = models.IntegerField()
+    seguidores = models.IntegerField(default=0)
     verificacion = models.BooleanField(default=False)
 
 class Albumes(models.Model):
@@ -18,5 +18,5 @@ class Canciones(models.Model):
     fk_album = models.ForeignKey(Albumes, on_delete=models.CASCADE)
     fk_genero = models.ForeignKey(Generos, on_delete=models.CASCADE)
     cancion = models.CharField(max_length = 50)
-    reproducciones = models.IntegerField()
+    reproducciones = models.IntegerField(default=0)
     duracion = models.IntegerField()

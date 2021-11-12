@@ -14,19 +14,19 @@ class ArtistaForm(forms.ModelForm):
     """ Formulario para registrar un Artista """
 
     class Meta:
-        model = Generos
-        fields=('genero','last_name', 'first_name', 'pais', 'fecha_nac', 'password')
+        model = Artistas
+        fields=('artista','seguidores', 'verificacion')
 
 class AlbumesForm(forms.ModelForm):
     """ Formulario para registrar un Album """
 
     class Meta:
-        model = Generos
-        fields=('genero','last_name', 'first_name', 'pais', 'fecha_nac', 'password')
+        model = Albumes
+        fields=('fk_artista','album', 'fecha')
 
 class CancionesForm(forms.ModelForm):
     """ Formulario para registrar una Cancion """
 
     class Meta:
-        model = Generos
-        fields=('genero','last_name', 'first_name', 'pais', 'fecha_nac', 'password')
+        model = Canciones
+        fields=('fk_album','fk_genero', 'cancion', 'reproducciones', 'duracion')

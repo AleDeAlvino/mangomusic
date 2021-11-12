@@ -329,7 +329,7 @@ label {
 }
 .Perfil{
     top: 220px;
-    left: 40%;
+    left: 43%;
     position: absolute;
     margin-top:-12%;
 }
@@ -343,12 +343,14 @@ label {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     border-radius: 25px 25px 25px 25px;
 }
-.Kim{
-    left: 22%;
+.nom_user{
+    /* left: 22%; */
     margin-top:4%;
     position: absolute;
     color: white;
     font-family: 'Heebo', sans-serif;
+    width: 100%;
+    text-align: center;
 }
 .Playlist h5{
     left: 5%; 
@@ -496,7 +498,7 @@ label {
 }
 #imagenes_menu{
     margin-top: 15px;
-    margin-left: 120px;
+    margin-left: 135px;
     margin-right: 15px;
     width: 150px;
     height: 150px;

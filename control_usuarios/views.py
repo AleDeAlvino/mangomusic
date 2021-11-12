@@ -53,5 +53,5 @@ def sign_in_view(request):
 
 @login_required
 def home_view(request):
-    return render(request, 'Home.html')
+    return render(request, 'albumes.html')
 

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,15 +53,15 @@
         </div> -->
 
         <div>
-            <img src="../static/images/Kim.jpg" id="imagenes_menu">
+            <img src="{{ user.avatar.url }}" id="imagenes_menu">
         </div>
 
         <div class="Perfil">
             <button type="button" class="boton-perfil"> Perfil </button>
         </div>
 
-        <div class="Kim">
-            <h1>KIM NAMJOON</h1>
+        <div class="nom_user">
+            <h2>{{user.first_name}} {{user.last_name}}</h2>
         </div>
 
         <div class="Playlist">
@@ -156,42 +157,8 @@
     </div>
 
     <div class="contenedor-musica">
-
-
-        <div class="texto9">
-            <h3>VUELVE A ESCUCHAR</h3>
-        </div>
-        <div class="cards">
-            <div>
-                <img src="../static/images/bts2.jpg" id="imagenes_musica">
-                <h5>LOVE YOURSELF: TEAR <br> 2018</h5>
-            </div>
-            <div>
-                <img src="../static/images/Marilynmanson.jpg" id="imagenes_musica">
-                <h5>Born Villain <br> 2012</h5>
-            </div>
-            <div>
-                <img src="../static/images/paramore.jpg" id="imagenes_musica">
-                <h5>All We Know Is Falling <br> 2005</h5>
-            </div>
-            <div>
-                <img src="../static/images/bts.jpg" id="imagenes_musica">
-                <h5>Most Beautiful Moment In Life 2 <br> 2015</h5>
-            </div>
-             <div>
-                <img src="../static/images/sabino.jpg" id="imagenes_musica">
-                <h5>Yo quería hacer rock <br> 2017</h5>
-            </div>
-            <div>
-                <img src="../static/images/ed.jpg" id="imagenes_musica">
-                <h5>X <br> 2014</h5>
-            </div>
-        </div>
-
-
-        
-           
-       
+        {% block content %}
+        {% endblock %}
     </div>
 
 
