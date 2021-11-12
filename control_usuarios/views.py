@@ -55,3 +55,7 @@ def sign_in_view(request):
 def home_view(request):
     return render(request, 'albumes.html')
 
+@login_required
+def change_perfil_view(request):
+    return render(request, 'change_perfil.html')
+

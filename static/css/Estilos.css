@@ -548,3 +548,76 @@ h5{
     margin-top: 2px;
     margin-right: 15px; 
 } 
+
+/*---------------------Editar perfil------------------------------*/
+.input-perfil{
+    margin-left:447px;
+    margin-top: 6%; 
+}
+.input-perfil input[type="text"],
+.input-perfil input[type="password"] {
+    max-width:600px;
+    width: 200%;
+    line-height:2.5em;
+    background-color: #403B3B;
+    margin: 12px;
+    border-color: #403B3B ;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 100%;
+}
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+    
+}
+select{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    margin-left:16px;
+    background-color: #403B3B;
+    border-color: #403B3B ;
+    line-height: 2.3em;
+    padding: .4em 1.4em .3em .2em;
+    width: 400px;
+    color: #a09c9c;
+   
+}
+option{
+    margin-left:16px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #a09c9c;
+    line-height:2.5em;
+}
+
+input{
+    background-color: #403B3B;
+    border-color: #403B3B ;
+    line-height:2.5em;
+    
+}
+input,
+label {
+    margin-left:16px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #a09c9c;
+    
+}
+.carga-foto{
+    margin: 12px;
+    padding-left: 50px;
+    background-color: #403B3B;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #ffff;
+}
+.seleccione{
+    background-color: #403B3B;
+    color: #ffff;
+    margin: 12px;
+}
+.mover-genero{
+    padding-left: 35%;
+    padding-top:21%;
+}
+.botton-3{
+    margin: 4%;
+    padding-left:10%;
+}
