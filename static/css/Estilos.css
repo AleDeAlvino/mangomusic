@@ -252,3 +252,297 @@ label {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;  
     
 }
+
+/*--------HOME-----------*/
+.general4 {
+    background-color: #242323;
+    background-size: cover;
+    margin-top: 0%;
+    margin-left: 0%;
+     
+ }
+ .box{
+     font-family: 'Zen Kaku Gothic Antique', sans-serif; 
+     left: 77%;
+     margin-top:1%;
+     position: absolute;
+ }
+ .container-1 input#search{
+     width: 300px;
+     height: 50px;
+     background: #242323;
+     border-color: #F18500;
+     font-size: 10pt;
+     float: left;
+     padding-left: 45px;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+ }
+ .container-1 input#search::-webkit-input-placeholder {
+     color: #ffffff;
+     font-size: 120%;
+ }
+ .Artistas{
+     left: 69%;
+     margin-top:0.6%;
+     position: absolute;
+     color: white;
+     font-family: 'Zen Kaku Gothic Antique', sans-serif;    
+ }
+ .Genero{
+     left: 63%;
+     margin-top:0.6%;
+     position: absolute;
+     color: white;
+     font-family: 'Zen Kaku Gothic Antique', sans-serif;    
+ }
+ .Canciones{
+     left: 55%;
+     margin-top:0.6%;
+     position: absolute;
+     color: white;
+     font-family: 'Zen Kaku Gothic Antique', sans-serif;    
+ }
+ .Albums{
+     left: 49%;
+     margin-top:0.6%;
+     position: absolute;
+     color: white;
+     font-family: 'Zen Kaku Gothic Antique', sans-serif;    
+ }
+ .Cuenta{
+     left: 42%;
+     margin-top:0.6%;
+     position: absolute;
+     color: white;
+     font-family: 'Zen Kaku Gothic Antique', sans-serif;    
+ } 
+
+/*------------------------------------------------------------------------------------*/
+
+.contenedor-menu{
+    background-color: #705a21;
+    width: 27%;
+    padding-bottom: 40%;
+    position:relative;
+}
+.Perfil{
+    top: 220px;
+    left: 40%;
+    position: absolute;
+    margin-top:-12%;
+}
+.boton-perfil{
+    padding: 5px 15px;
+    position: absolute;
+    margin-top:125%;
+    color: white;
+    background-color:#FFB800;
+    border:1px solid #FFB800;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    border-radius: 25px 25px 25px 25px;
+}
+.Kim{
+    left: 22%;
+    margin-top:4%;
+    position: absolute;
+    color: white;
+    font-family: 'Heebo', sans-serif;
+}
+.Playlist h5{
+    left: 5%; 
+    margin-top:20%;
+    position: absolute;
+    color: #FFB800;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+.Seguidores h5{
+    left: 42%;
+    margin-top:20%;
+    position: absolute;
+    color: #FFB800;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+.Seguidos h5{
+    left: 75%;
+    margin-top:20%;
+    position: absolute;
+    color: #FFB800;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+.t1 h5{
+    left: 19%; 
+    margin-top:30%;
+    position: absolute;
+    color:white;
+    font-family:'Heebo', sans-serif;
+}
+.t2 h5{
+    left: 35%; 
+    margin-top:35%;
+    position: absolute;
+    color: #FFB800;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+.tt1{
+    position: absolute;
+    margin-top:45%;
+    left: 10%;
+    color: white;
+}
+.tt2{
+    position: absolute;
+    margin-top:57.5%;
+    left: 10%;
+    color: white;
+}
+.tt3{
+    position: absolute;
+    margin-top:70%;
+    left: 10%;
+    color: white;
+}
+.tt4{
+    position: absolute;
+    margin-top:82.5%;
+    left: 10%;
+    color: white;
+}
+.tt5{
+    position: absolute;
+    margin-top:95%;
+    left: 10%;
+    color: white;
+}
+.tt6{
+    position: absolute;
+    margin-top:45%;
+    left: 50%;
+    color: white;
+}
+.tt7{
+    position: absolute;
+    margin-top:57.5%;
+    left: 50.5%;
+    color: white;
+}
+.tt8{
+    position: absolute;
+    margin-top:70%;
+    left: 40%;
+    color: white;
+}
+.tt9{
+    position: absolute;
+    margin-top:82.5%;
+    left: 41%;
+    color: white;
+}
+.tt10{
+    position: absolute;
+    margin-top:95%;
+    left: 41%;
+    color: white;
+}
+.tt11{
+    position: absolute;
+    margin-top:45%;
+    left: 85%;
+    color: white;
+}
+.tt12{
+    position: absolute;
+    margin-top:57.5%;
+    left: 85%;
+    color: white;
+}
+.tt13{
+    position: absolute;
+    margin-top:70%;
+    left: 85%;
+    color: white;
+}
+.tt14{
+    position: absolute;
+    margin-top:82.5%;
+    left: 85%;
+    color: white;
+}
+.tt15{
+    position: absolute;
+    margin-top:95%;
+    left: 85%;
+    color: white;
+}
+.Biblioteca h3{
+    left: 31%;
+    position: absolute;
+    color: #FFB800;
+    margin-top:120%;
+    font-family:'Heebo', sans-serif;
+}
+.Cerrar-Sesion button{
+    padding: 13px 50px;
+    position: absolute;
+    margin-top:135%;
+    left: 28%;
+    color: white;
+    background-color:#FFB800;
+    border:1px solid #FFB800;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    border-radius: 25px 25px 25px 25px;
+
+}
+#imagenes_menu{
+    margin-top: 15px;
+    margin-left: 120px;
+    margin-right: 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/*------------------------------------------------------------------------------------*/
+.contenedor-musica{
+    background-color: #8F5611;
+    width: 69%;
+    position:relative;
+    left: 30%;
+    border-radius: 2%;
+    margin-top:-46.3%;
+}
+.texto9{
+    font-family: 'Heebo', sans-serif;
+    padding-left: 50px;
+    padding-top: 2px;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;   
+    margin-left:8%;
+    
+} 
+.cards div{
+    background-color:#392207 ;
+    width: 22%;
+    margin: 39px;
+    text-align: center;
+    border-radius: 4%;
+}
+#imagenes_musica{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 15px;
+    width: 135px;
+    height: 150px;
+}
+h5{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 80%;
+    color: rgb(255, 255, 255);
+    margin-right: 50px;
+    margin-top: 2px;
+    margin-right: 15px; 
+} 
