@@ -25,5 +25,23 @@ def crud_view(request, model_id):
     return render(request, 'CRUD.html', {'model_id':model_id})
 
 @login_required
+def add_canciones_view(request):
+    return render(request, 'agregar_canciones.html')
+
+@login_required
+def add_artistas_view(request):
+    return render(request, 'agregar_artistas.html')
+
+@login_required
+def add_albumes_view(request):
+    return render(request, 'agregar_albumes.html')
+
+@login_required
+def add_generos_view(request):
+    return render(request, 'agregar_generos.html')
+
+
+# Modificar el html al correspondiente
+@login_required
 def artistas_view(request):
     return render(request, 'agregar_artistas.html')

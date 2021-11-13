@@ -2,9 +2,11 @@
 {% block content %}
     <div class="menu-agregar">
 
-        <div class="contenedor-menu-agregar">
+        {% if model_id = 1 %}
+        <div class="contenedor-menu-agregar" onclick="location.href = '/add_canciones'">
             <p>Agregar</p>
         </div>
+        {% endif %}
 
         <div class="contenedor-editar">
             <p>Editar o Eliminar</p>

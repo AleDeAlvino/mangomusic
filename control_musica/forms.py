@@ -1,8 +1,6 @@
 from django import forms
 from .models import Generos, Artistas, Albumes, Canciones
 
-# Falta cambiar los campos de artista, albumnes y canciones
-
 class GenerosForm(forms.ModelForm):
     """ Formulario para registrar un Genero """
 
@@ -15,14 +13,14 @@ class ArtistaForm(forms.ModelForm):
 
     class Meta:
         model = Artistas
-        fields=('artista','seguidores', 'verificacion')
+        fields=('artista','seguidores', 'verificacion', 'foto')
 
 class AlbumesForm(forms.ModelForm):
     """ Formulario para registrar un Album """
 
     class Meta:
         model = Albumes
-        fields=('fk_artista','album', 'fecha')
+        fields=('fk_artista','album', 'fecha', 'foto')
 
 class CancionesForm(forms.ModelForm):
     """ Formulario para registrar una Cancion """
