@@ -37,15 +37,18 @@
                 <input type="date" id="start" value="2018-07-22" min="1950-01-01" max="2022-12-31" class="form-control" name="{{form.fecha_nac.name}}">
             </div>
             <div class="form-group">
-                <input type="file" class="form-control" name="{{form.avatar.name}}" value="{{user.avatar}}"/>
+                <input id="seleccione" type="file" class="form-control" name="{{form.avatar.name}}" value="{{user.avatar}}"/>
             </div>
             <div class="form-group">
-                <textarea  rows="10" cols="30" class="form-control" name="{{form.desc.name}}">{{user.desc}}</textarea>
+                <textarea  id="desc_s" rows="10" cols="30" class="form-control" name="{{form.desc.name}}">{{user.desc}}</textarea>
             </div>
             <div class="botton-3">
                 <input type="submit" value="Enviar" class="button1">
             </div>
         </form>
+        <div id="camb_pass" class="botton-3">
+            <button type="button" id="camb_pass_in" class="button1" onclick="location.href = '/change_password_view'">Cambiar contraseña</button>
+        </div>
     </div>
 </body>
 </html>

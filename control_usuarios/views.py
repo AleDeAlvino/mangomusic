@@ -64,13 +64,6 @@ def change_perfil_view(request, user_id):
         }
     )
     if request.method == 'POST':
-        print("entre al primer if de change")
-        print(request.POST['username'])
-        print(request.POST['first_name'])
-        print(request.POST['last_name'])
-        print(request.POST['pais'])
-        print(request.POST['fecha_nac'])
-        print(request.POST['desc'])
         form = UserForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             print("el formulario es valido")
@@ -88,3 +81,19 @@ def change_perfil_view(request, user_id):
     form = UserForm(instance=profile)
     return render(request, 'change_perfil.html', {'form':form, 'profile':profile})
 
+@login_required
+def change_password_view(request):
+    if request.method == 'POST':
+        print(request.POST['old_password'])
+        print(request.POST['new_password1'])
+        print(request.POST['new_password2'])
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Listo, contraseña actualizada')
+        else:
+            messages.error(request, 'Porfavor revisa tus datos')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'change_password.html', {'form': form})

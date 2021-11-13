@@ -697,14 +697,14 @@ label {
     color: #a09c9c;
     
 }
-.carga-foto{
+#desc_s{
     margin: 12px;
     padding-left: 50px;
     background-color: #403B3B;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     color: #ffff;
 }
-.seleccione{
+#seleccione{
     background-color: #403B3B;
     color: #ffff;
     margin: 12px;
@@ -714,7 +714,7 @@ label {
     padding-left:10%;
 }
 .button1{
-    left: 65%;
+    left: 55%;
     bottom: 12%;
     padding: 13px 50px;
     position: absolute;
@@ -723,4 +723,11 @@ label {
     border:1px solid #FFB800;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;  
     border-radius: 25px 25px 25px 25px;
+}
+
+#camb_pass{
+    left: 75%;
+}
+#camb_pass_in{
+    left: 75%;
 }
