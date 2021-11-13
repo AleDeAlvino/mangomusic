@@ -31,7 +31,7 @@
         <h4>Canciones</h4>
     </div>
 
-    <div class="Albums">
+    <div class="Albums" onclick="location.href = '/home'">
         <h4>Albums</h4>
     </div>
     {% if user.tipo_us == "normal" %}
@@ -66,7 +66,7 @@
         </div>
 
         <div class="Perfil">
-            <button type="button" class="boton-perfil" onclick="location.href = '/change'"> Perfil </button>
+            <a type="button" class="boton-perfil" href="{% url 'change_perfil_view' user.id%}">Perfil</a>
         </div>
 
         <div class="nom_user">

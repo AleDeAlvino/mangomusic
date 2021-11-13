@@ -56,6 +56,35 @@ def home_view(request):
     return render(request, 'albumes.html')
 
 @login_required
-def change_perfil_view(request):
-    return render(request, 'change_perfil.html')
+def change_perfil_view(request, user_id):
+    profile, created = User.objects.get_or_create(
+        pk=user_id,
+        defaults={
+            'desc':'Aún no hay una descripción disponible',
+        }
+    )
+    if request.method == 'POST':
+        print("entre al primer if de change")
+        print(request.POST['username'])
+        print(request.POST['first_name'])
+        print(request.POST['last_name'])
+        print(request.POST['pais'])
+        print(request.POST['fecha_nac'])
+        print(request.POST['desc'])
+        form = UserForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            print("el formulario es valido")
+            if form.has_changed():
+                new_profile = form.save(commit=False)
+                new_profile.pk = request.user.id
+                new_profile.save()
+                messages.success(request, 'Listo, perfil actualizado')
+            else:
+                print("no hizo cambios")
+                messages.info(request, 'No has hecho cambios')
+        else:
+            print("no es valido")
+            messages.error(request, 'No se pudo actualizar tu perfil')
+    form = UserForm(instance=profile)
+    return render(request, 'change_perfil.html', {'form':form, 'profile':profile})
 

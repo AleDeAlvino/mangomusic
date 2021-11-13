@@ -20,4 +20,4 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         help_texts = {'username': None,}
-        fields=('username','last_name', 'first_name', 'avatar', 'desc', 'pais', 'fecha_nac')
+        fields=('username','first_name','last_name','pais','fecha_nac', 'avatar', 'desc')

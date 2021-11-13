@@ -1,44 +1,51 @@
 
 {% extends 'Home.html' %}
-
 {% block content %}
-
+<link rel="stylesheet" type="text/css" href="../../static/css/Estilos.css">
+   
     <div class="input-perfil">
 
         <h1>Pantalla para editar el perfil</h1>
         <br>
-        <input type="text" placeholder="Nombre de usuario" />
-       
-        <input type="text" placeholder="Apeido" />
-        
-        <input type="text" placeholder="Primer Nombre " />
-        
-        <input type="text" placeholder="Correo electronico: mangomail@mail.com" />
-        
-        <label for="start">País:</label>
-        <select name="pais">
-            <option>Selecciona una opción</option>
-            <option value="Argentina">Argentina</option>
-            <option value="España">España</option>
-            <option value="México">México</option>
-            <option value="Guatemala">Guatemala</option>
-            <option value="Honduras">Honduras</option>
-            <option value="Italia">Italia</option>
-            <option value="China">China</option>
-            <option value="Corea del Sur">Corea del Sur</option>
-        </select>
-     
-        <label for="start">Fecha de Nacimiento:</label>
-        <input type="date" id="start" name="trip-start" value="2018-07-22" min="1950-01-01" max="2022-12-31">
-
-        <input name="uploadedfile" type="file"  class=" seleccione"/>
-
-        <textarea name="textarea" rows="10" cols="30" class="carga-foto">Descripción</textarea>
-
-        <div class="botton-3">
-            <button type="button" class="button1"> Enviar </button>
-        </div>
-
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email" placeholder="Correo electronico: mangomail@mail.com" class="form-control" name="{{form.username.name}}" value="{{user.username}}"/>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Nombre" class="form-control" name="{{form.first_name.name}}" value="{{user.first_name}}"/>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Apellido" class="form-control" name="{{form.last_name.name}}" value="{{user.last_name}}"/>
+            </div>
+            <label for="start">País:</label>
+            <div class="form-group">
+                <select name="pais" class="form-control" name="{{form.pais.name}}">
+                    <option>Selecciona una opción</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="España">España</option>
+                    <option value="México">México</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Italia">Italia</option>
+                    <option value="China">China</option>
+                    <option value="Corea del Sur">Corea del Sur</option>
+                </select>
+            </div>
+            <label for="start">Fecha de Nacimiento:</label>
+            <div class="form-group">
+                <input type="date" id="start" value="2018-07-22" min="1950-01-01" max="2022-12-31" class="form-control" name="{{form.fecha_nac.name}}">
+            </div>
+            <div class="form-group">
+                <input type="file" class="form-control" name="{{form.avatar.name}}" value="{{user.avatar}}"/>
+            </div>
+            <div class="form-group">
+                <textarea  rows="10" cols="30" class="form-control" name="{{form.desc.name}}">{{user.desc}}</textarea>
+            </div>
+            <div class="botton-3">
+                <input type="submit" value="Enviar" class="button1">
+            </div>
+        </form>
     </div>
 </body>
 </html>
