@@ -1,0 +1,29 @@
+{% extends 'Home.html' %}
+{% block content %}
+<div class="conte-principal-menu">
+
+    <div class="contenedor-canciones" onclick="location.href = '/CRUD/1'">
+        <p>Canciones</p>
+    </div>
+
+    
+    <div class="contenedor-artistas" onclick="location.href = '/CRUD/2'">
+        <p>Artistas</p>
+    </div>
+
+    
+</div>
+
+
+<div class="conte-segundo-menu">
+    <div class="contenedor-album" onclick="location.href = '/CRUD/3'">
+        <p>Album</p>
+    </div>
+
+    <div class="contenedor-genero" onclick="location.href = '/CRUD/4'">
+        <p>Genero</p>
+    </div>
+
+    
+</div>
+{% endblock %}

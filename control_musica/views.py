@@ -15,6 +15,15 @@ from django.contrib.auth import logout
 # from .forms import 
 
 # Create your views here.
+
+@login_required
+def configuracion_view(request):
+    return render(request, 'configuracion.html')
+
+@login_required
+def crud_view(request, model_id):
+    return render(request, 'CRUD.html', {'model_id':model_id})
+
 @login_required
 def artistas_view(request):
     return render(request, 'agregar_artistas.html')

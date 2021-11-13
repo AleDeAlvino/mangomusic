@@ -44,7 +44,7 @@
     <div class="Cuenta_2">
         <h4>Cuenta: {{user.tipo_us}}</h4>
     </div>
-    <button type="button" class="config"> Configuracion </button>
+    <button type="button" class="config" onclick="location.href = '/configuracion'"> Configuracion </button>
     {% endif %}
 
     <div class="box">
@@ -66,7 +66,7 @@
         </div>
 
         <div class="Perfil">
-            <a type="button" class="boton-perfil" href="{% url 'change_perfil_view' user.id%}">Perfil</a>
+            <button type="button" class="boton-perfil" onclick="location.href = '/change/{{user.id}}'">Perfil</button>
         </div>
 
         <div class="nom_user">
