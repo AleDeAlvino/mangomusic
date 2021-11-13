@@ -34,9 +34,18 @@
     <div class="Albums">
         <h4>Albums</h4>
     </div>
+    {% if user.tipo_us == "normal" %}
     <div class="Cuenta">
-        <h4>Cuenta</h4>
+        <h4>Cuenta: {{user.tipo_us}}</h4>
     </div>
+    {% endif %}
+
+    {% if user.tipo_us == "admin" %}
+    <div class="Cuenta_2">
+        <h4>Cuenta: {{user.tipo_us}}</h4>
+    </div>
+    <button type="button" class="config"> Configuracion </button>
+    {% endif %}
 
     <div class="box">
         <div class="container-1">

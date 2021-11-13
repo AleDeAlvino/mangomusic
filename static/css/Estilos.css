@@ -312,12 +312,32 @@ label {
      font-family: 'Zen Kaku Gothic Antique', sans-serif;    
  }
  .Cuenta{
-     left: 42%;
+     left: 35%;
      margin-top:0.6%;
      position: absolute;
      color: white;
      font-family: 'Zen Kaku Gothic Antique', sans-serif;    
  } 
+ .Cuenta_2{
+    left: 30%;
+    margin-top:0.6%;
+    position: absolute;
+    color: white;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;    
+}
+
+.config{
+    left: 38%;
+    top: 3.5%;
+    float: left;
+    position: absolute;
+    padding: 5px 15px;
+    color: white;
+    background-color:#FFB800;
+    border:1px solid #FFB800;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    border-radius: 25px 25px 25px 25px;
+}
 
 /*------------------------------------------------------------------------------------*/
 
@@ -620,4 +640,86 @@ label {
 .botton-3{
     margin: 4%;
     padding-left:10%;
+}
+
+/* ----------------------------- */
+/* Change perfil */
+
+.input-perfil{
+    margin-left:300px;
+    margin-top: 6%; 
+}
+.input-perfil input[type="text"],
+.input-perfil input[type="password"] {
+    max-width:600px;
+    width: 200%;
+    line-height:2.5em;
+    background-color: #403B3B;
+    margin: 12px;
+    border-color: #403B3B ;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 100%;
+}
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+    
+}
+select{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    margin-left:16px;
+    background-color: #403B3B;
+    border-color: #403B3B ;
+    line-height: 2.3em;
+    padding: .4em 1.4em .3em .2em;
+    width: 400px;
+    color: #a09c9c;
+   
+}
+option{
+    margin-left:16px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #a09c9c;
+    line-height:2.5em;
+}
+
+input{
+    background-color: #403B3B;
+    border-color: #403B3B ;
+    line-height:2.5em;
+    
+}
+input,
+label {
+    margin-left:16px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #a09c9c;
+    
+}
+.carga-foto{
+    margin: 12px;
+    padding-left: 50px;
+    background-color: #403B3B;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #ffff;
+}
+.seleccione{
+    background-color: #403B3B;
+    color: #ffff;
+    margin: 12px;
+}
+.botton-3{
+    margin: 4%;
+    padding-left:10%;
+}
+.button1{
+    left: 65%;
+    bottom: 12%;
+    padding: 13px 50px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color:#463B1F;
+    border:1px solid #FFB800;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;  
+    border-radius: 25px 25px 25px 25px;
 }

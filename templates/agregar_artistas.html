@@ -1,0 +1,37 @@
+{% extends 'Home.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos-2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Heebo:wght@400;900&family=Montserrat:wght@100&family=Mukta:wght@200;800&family=Nunito+Sans:wght@900&family=PT+Sans:ital,wght@1,700&family=Roboto:wght@400;500;700&family=Ubuntu:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
+    <title> Artistas </title>
+</head>
+
+<body class="general5">
+
+    <div class="input-artista">
+
+        <label for="start" class="label-class">¿El artista esta verificado?:</label>
+        <label><input type="checkbox" id="bton1" > Si</label><br>
+        <label><input type="checkbox" id="bton1" > No</label><br>
+
+        <label for="start">Artista Musical:</label>
+        <input type="text" placeholder="Nombre del Arista" />
+
+        <label for="start">Seguidores:</label>
+        <input type="number" placeholder="Seguidores" />
+        
+        
+        
+    </div>
+    <div class="botton-4">
+        <button type="button" class="button1"> Enviar </button>
+    </div>
+</body>
+</html>
+{% endblock %}
