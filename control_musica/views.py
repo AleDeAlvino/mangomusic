@@ -35,7 +35,7 @@ def add_canciones_view(request):
         print("Es valido")
         album = Albumes.objects.filter(pk=request.POST['fk_album']).first()
         genero = Generos.objects.filter(pk=request.POST['fk_genero']).first()
-        cancion = Canciones(fk_album=album, fk_genero=genero, cancion=request.POST['cancion'], reproducciones=request.POST['reproducciones'], duracion=request.POST['duracion'])
+        cancion = Canciones(fk_album=album, fk_genero=genero, cancion=request.POST['cancion'], reproducciones=request.POST['reproducciones'], duracion=request.POST['duracion'], link=request.POST['link'])
         cancion.save()
     else:
         print("no entra")

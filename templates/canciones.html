@@ -6,7 +6,7 @@
 </div>
 <div class="cards">
     {% for Cancion in canciones %}
-    <div>
+    <div onclick="location.href = '{{Cancion.link}}'">
         <h5>Nombre: {{ Cancion.cancion }}<br>N. Reproducciones:  {{ Cancion.reproducciones}}<br>Duración:  {{ Cancion.duracion}} </h5>
     </div>
     {% endfor %}

@@ -27,4 +27,4 @@ class CancionesForm(forms.ModelForm):
 
     class Meta:
         model = Canciones
-        fields=('fk_album','fk_genero', 'cancion', 'reproducciones', 'duracion')
+        fields=('fk_album','fk_genero', 'cancion', 'reproducciones', 'duracion', 'link')
