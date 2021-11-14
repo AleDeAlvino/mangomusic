@@ -1,0 +1,12 @@
+{% extends 'Home.html' %}
+{% block content %}
+{% for Artista in artistas %}
+<div class="mostrar_generos">
+{{Artista.artista}}
+    <button type="button" onclick="location.href = '/change_artista/{{Artista.pk}}'"> Editar </button>
+    <button type="button" onclick="location.href = '/d_artistas/{{Artista.pk}}'"> Eliminar </button>
+</div>  
+ 
+
+{% endfor %}
+{% endblock %}

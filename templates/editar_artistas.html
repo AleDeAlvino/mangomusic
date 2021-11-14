@@ -1,0 +1,36 @@
+{% extends 'Home.html' %} {% block content %}
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="input-artista">
+    <label for="start" class="label-class">¿El artista esta verificado?:</label>
+
+    <div class="form-group">
+        <select name="verificacion" name="{{form.verificacion.name}}" value = "{{artis.verificacion}}">
+        <option>Selecciona una opción</option>
+        <option value="True">Si</option>
+        <option value="False">No</option>
+        </select>
+    </div>
+
+    <label for="start">Artista Musical:</label>
+
+    <div class="form-group">
+        <input type="text" placeholder="Nuevo nombre del Arista" name="{{form.artista.name}}" value = "{{artis.artista}}"/>
+    </div>
+
+    <label for="start">Seguidores:</label>
+
+    <div class="form-group">
+        <input type="number" placeholder="Seguidores" name="{{form.seguidores.name}}" value = "{{artis.seguidores}}"/>
+    </div>
+
+    <div class="form-group">
+        <input id="seleccione" type="file" name="{{form.foto.name}}" value = "{{artis.foto}}"/>
+    </div>
+
+    <div class="botton-3">
+        <input type="submit" class="button1" value="Enviar" />
+    </div>
+  </div>
+</form>
+{% endblock %}

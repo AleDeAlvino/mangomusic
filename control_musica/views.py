@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
@@ -11,8 +11,10 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import authenticate
 from django.contrib.auth import login
 from django.contrib.auth import logout
+
+from control_musica.forms import GenerosForm
 from .models import Generos, Artistas, Albumes, Canciones
-# from .forms import GenerosForm, ArtistaForm, AlbumesForm, CancionesForm
+from .forms import GenerosForm, ArtistaForm, AlbumesForm, CancionesForm
 
 # Create your views here.
 
@@ -23,6 +25,8 @@ def configuracion_view(request):
 @login_required
 def crud_view(request, model_id):
     return render(request, 'CRUD.html', {'model_id':model_id})
+
+# ---------------- AGREGAR ----------------
 
 @login_required
 def add_canciones_view(request):
@@ -74,6 +78,149 @@ def add_generos_view(request):
         print("no entra")
         print(request.method)
     return render(request, 'agregar_generos.html')
+
+# ---------------- MOSTRAR ----------------
+
+@login_required
+def m_generos_view(request):
+    generos = Generos.objects.all()
+    return render(request, 'mostrar_generos.html', {'generos':generos})
+
+@login_required
+def m_artistas_view(request):
+    artistas = Artistas.objects.all()
+    return render(request, 'mostrar_artistas.html', {'artistas':artistas})
+
+@login_required
+def m_albumes_view(request):
+    albumes = Albumes.objects.all()
+    return render(request, 'mostrar_albumes.html', {'albumes':albumes})
+
+@login_required
+def m_canciones_view(request):
+    canciones = Canciones.objects.all()
+    return render(request, 'mostrar_canciones.html', {'canciones':canciones})
+
+# ---------------- DELETES ----------------
+@login_required
+def d_generos_view(request, genero_id):
+    genero = get_object_or_404(Generos, id= genero_id)
+    genero.delete()
+    return redirect('m_generos_view')
+
+@login_required
+def d_canciones_view(request, cancion_id):
+    cancion = get_object_or_404(Canciones, id= cancion_id)
+    cancion.delete()
+    return redirect('m_canciones_view')
+    
+@login_required
+def d_artistas_view(request, artista_id):
+    artista = get_object_or_404(Artistas, id= artista_id)
+    artista.delete()
+    return redirect('m_artistas_view')
+
+@login_required
+def d_albumes_view(request, album_id):
+    album = get_object_or_404(Albumes, id= album_id)
+    album.delete()
+    return redirect('m_albumes_view')
+
+@login_required
+def change_genero_view(request, genero_id):
+    gene, created = Generos.objects.get_or_create(
+        id=genero_id,
+    )
+    print("---------------------------------", request.user.id)
+    if request.method == 'POST':
+        form = GenerosForm(request.POST, request.FILES, instance=gene)
+        if form.is_valid():
+            print("el formulario es valido")
+            if form.has_changed():
+                new_gene = form.save(commit=False)
+                new_gene.pk = genero_id
+                new_gene.save()
+                messages.success(request, 'Listo, genero actualizado')
+            else:
+                print("no hizo cambios")
+                messages.info(request, 'No has hecho cambios')
+        else:
+            print("no es valido")
+            messages.error(request, 'No se pudo actualizar tu genero')
+            
+    form = GenerosForm(instance=gene)
+    return render(request, 'editar_generos.html', {'form':form, 'gene':gene})
+
+@login_required
+def change_artista_view(request, artista_id):
+    artis, created = Artistas.objects.get_or_create(
+        id=artista_id,
+    )
+    if request.method == 'POST':
+        form = ArtistaForm(request.POST, request.FILES, instance=artis)
+        if form.is_valid():
+            print("el formulario es valido")
+            if form.has_changed():
+                new_art = form.save(commit=False)
+                new_art.pk = artista_id
+                new_art.save()
+                messages.success(request, 'Listo, genero actualizado')
+            else:
+                print("no hizo cambios")
+                messages.info(request, 'No has hecho cambios')
+        else:
+            print("no es valido")
+            messages.error(request, 'No se pudo actualizar tu genero')
+    form = ArtistaForm(instance=artis)
+    return render(request, 'editar_artistas.html', {'form':form, 'artis':artis})
+
+@login_required
+def change_album_view(request, album_id):
+    albu, created = Albumes.objects.get_or_create(
+        id=album_id,
+    )
+    if request.method == 'POST':
+        form = AlbumesForm(request.POST, request.FILES, instance=albu)
+        if form.is_valid():
+            print("el formulario es valido")
+            if form.has_changed():
+                new_gene = form.save(commit=False)
+                new_gene.pk =  album_id
+                new_gene.save()
+                messages.success(request, 'Listo, genero actualizado')
+            else:
+                print("no hizo cambios")
+                messages.info(request, 'No has hecho cambios')
+        else:
+            print("no es valido")
+            messages.error(request, 'No se pudo actualizar tu genero')
+    form = AlbumesForm(instance=albu)
+    return render(request, 'editar_albumes.html', {'form':form, 'albu':albu})
+
+@login_required
+def change_cancion_view(request, cancion_id):
+    canci, created = Canciones.objects.get_or_create(
+        id=cancion_id,
+    )
+    
+    if request.method == 'POST':
+        form = CancionesForm(request.POST, request.FILES, instance=canci)
+        if form.is_valid():
+            print("el formulario es valido")
+            if form.has_changed():
+                new_gene = form.save(commit=False)
+                new_gene.pk = cancion_id
+                new_gene.save()
+                messages.success(request, 'Listo, genero actualizado')
+            else:
+                print("no hizo cambios")
+                messages.info(request, 'No has hecho cambios')
+        else:
+            print("no es valido")
+            messages.error(request, 'No se pudo actualizar tu genero')
+    form = CancionesForm(instance=canci)
+    return render(request, 'editar_canciones.html', {'form':form, 'canci':canci})
+
 
 
 # Modificar el html al correspondiente

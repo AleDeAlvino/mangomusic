@@ -1,0 +1,12 @@
+{% extends 'Home.html' %}
+{% block content %}
+{% for Album in albumes %}
+<div class="mostrar_generos">
+{{Album.album}}
+    <button type="button" onclick="location.href = '/change_album/{{Album.pk}}'"> Editar </button>
+    <button type="button" onclick="location.href = '/d_albumes/{{Album.pk}}'"> Eliminar </button>
+</div>
+ 
+
+{% endfor %}
+{% endblock %}

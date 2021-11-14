@@ -1,0 +1,17 @@
+{% extends 'Home.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="mover-genero">
+        <label for="start">Edita el genero</label>
+
+        <div class="form-group">
+            <input type="text" name="genero" placeholder="Edita el genero musical" name="{{form.genero.name}}" value="{{gene.genero}}"/>
+        </div>
+        
+        <div class="botton-3">
+            <input type="submit" class="button1" value="Enviar">
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'Home.html' %}
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="input-perfil">
+
+        <label for="fk_album">ID del Album</label>
+        
+        <div class="form-group">
+            <input type="number" id="fk_album" name="{{form.fk_album.name}}" value="{{canci.fk_album.pk}}"/>
+        </div>
+        <label for="fk_genero">ID del Genero</label>
+        
+        <div class="form-group">
+            <input type="number" id="fk_genero" name="{{form.fk_genero.name}}" value="{{canci.fk_genero.pk}}"/>
+        </div>
+        <label for="cancion">Nombre de la Cancion</label>
+        
+        <div class="form-group">
+            <input type="text" id="cancion" placeholder=" Escribe el nombre de la cancion" name="{{form.cancion.name}}" value="{{canci.cancion}}"/>
+        </div>
+        <label for="reproducciones">Reproducciones</label>
+       
+        <div class="form-group">
+            <input type="number" id="reproducciones" name="{{form.reproducciones.name}}" value="{{canci.reproducciones}}"/>
+        </div>
+        <label for="duracion">Duracion</label>
+       
+        <div class="form-group">
+            <input type="number" name="{{form.duracion.name}}" value="{{canci.duracion}}"/>
+        </div>
+        
+        <div class="botton-3">
+            <input type="submit" class="button1" value="Enviar">
+        </div>
+    </div>
+</form>
+{% endblock %}

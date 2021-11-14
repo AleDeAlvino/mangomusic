@@ -648,7 +648,7 @@ label {
 /* Change perfil */
 
 .input-perfil{
-    margin-left:10px;
+    margin-left:260px;
     margin-top: 6%; 
 }
 .input-perfil input[type="text"],
@@ -712,7 +712,7 @@ label {
 }
 .botton-3{
     margin: 4%;
-    padding-left:15%;
+    padding-left:10%;
 }
 .button1{
     left: 55%;
@@ -822,4 +822,21 @@ p {
     border:1px solid #FFB800;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;  
     border-radius: 25px 25px 25px 25px;
+}
+.bton-eliminar{
+    padding: 13px 50px;
+    position: absolute;
+    /* margin-top: 2%; */
+    color: rgb(255, 255, 255);
+    background-color:#463B1F;
+    border:1px solid #FFB800;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;  
+    border-radius: 25px 25px 25px 25px;
+}
+.mostrar_generos{
+    padding-left: 10%;
+    margin-top: 3px;
+    color: white;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    
 }

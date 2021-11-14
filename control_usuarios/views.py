@@ -12,6 +12,7 @@ from django.contrib.auth import login
 from django.contrib.auth import logout
 from .models import User
 from .forms import ProfileForm, UserForm
+from control_musica.models import Albumes
 
 # Create your views here.
 def Bienvenida_view(request):
@@ -53,7 +54,8 @@ def sign_in_view(request):
 
 @login_required
 def home_view(request):
-    return render(request, 'albumes.html')
+    albumes = Albumes.objects.all()
+    return render(request, 'albumes.html', {'albumes':albumes})
 
 @login_required
 def change_perfil_view(request, user_id):
