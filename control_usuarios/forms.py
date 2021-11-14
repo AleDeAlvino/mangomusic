@@ -21,3 +21,9 @@ class UserForm(forms.ModelForm):
         model = User
         help_texts = {'username': None,}
         fields=('username','first_name','last_name','pais','fecha_nac', 'avatar', 'desc')
+
+class BusquedaForm(forms.Form):
+    """ Formulario para buscar una Cancion, un Album o Artista """
+
+    class Meta:
+        fields=('search',)

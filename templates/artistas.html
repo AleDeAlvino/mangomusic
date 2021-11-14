@@ -1,0 +1,16 @@
+{% extends 'Home.html' %}
+
+{% block content %}
+<div class="texto9">
+    <h3>Artistas</h3>
+</div>
+<div class="cards">
+    {% for Artista in artistas %}
+    <div>
+        <img src="{{ Artista.foto.url }}" id="imagenes_musica">
+        <h5>{{ Artista.artista }}<br>N. Seguidores:  {{ Artista.seguidores}}</h5>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

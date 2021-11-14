@@ -224,6 +224,28 @@ def change_cancion_view(request, cancion_id):
 
 
 # Modificar el html al correspondiente
+
 @login_required
 def artistas_view(request):
-    return render(request, 'agregar_artistas.html')
+    artistas = Artistas.objects.all()
+    return render(request, 'artistas.html', {'artistas':artistas})
+
+@login_required
+def canciones_view(request):
+    canciones = Canciones.objects.all()
+    return render(request, 'canciones.html', {'canciones':canciones})
+
+@login_required
+def busqueda_view(request):
+    artista=None
+    album=None
+    cancion=None
+    if request.method == 'POST':
+        print(request.POST['search'])
+        artista = Artistas.objects.filter(artista=request.POST['search']).first()
+        print(artista)
+        album = Albumes.objects.filter(album=request.POST['search']).first()
+        print(album)
+        cancion = Canciones.objects.filter(cancion=request.POST['search']).first()
+        print(cancion)
+    return render(request, 'busqueda.html', {'artista':artista, 'album':album, 'cancion':cancion})

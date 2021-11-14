@@ -1,0 +1,30 @@
+{% extends 'Home.html' %}
+
+{% block content %}
+<div class="texto9">
+    <h3>Busqueda</h3>
+</div>
+<div class="cards">
+    {% if artista != None %}
+    <div>
+        <img src="{{ artista.foto.url }}" id="imagenes_musica">
+        <h5>{{ artista.artista }}<br>N. Seguidores:  {{ artista.seguidores}}</h5>
+    </div>
+    {% endif %}
+
+    {% if cancion != None %}
+    <div>
+        <h5>Nombre: {{ cancion.cancion }}<br>N. Reproducciones:  {{ cancion.reproducciones}}<br>Duración:  {{ Cancion.duracion}} </h5>
+    </div>
+    {% endif %}
+
+    {% if album != None %}
+    <div>
+        <img src="{{ album.foto.url }}" id="imagenes_musica">
+        <h5>{{ album.album }}<br> {{ album.fecha}}</h5>
+    </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}

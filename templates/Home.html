@@ -19,15 +19,11 @@
 
 <body class="general4">
 
-    <div class="Artistas">
+    <div class="Artistas" onclick="location.href = '/artistas'">
         <h4>Artistas</h4>
     </div>
 
-    <div class="Genero">
-        <h4>Genero</h4>
-    </div>
-
-    <div class="Canciones">
+    <div class="Canciones" onclick="location.href = '/canciones'">
         <h4>Canciones</h4>
     </div>
 
@@ -48,9 +44,13 @@
     {% endif %}
 
     <div class="box">
+        <form method="post" action="{% url 'busqueda_view'%}">
+            {% csrf_token %}
         <div class="container-1">
-            <input type="search" id="search" placeholder="Artistas, canciones, albums" />
+            <input type="search" id="search" placeholder="Artistas, canciones, albums" name="search"/>
         </div>
+        <input type="submit" id="submitbtn"/>
+        </form>
     </div>
 
     <div class="contenedor-menu">

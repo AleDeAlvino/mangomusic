@@ -298,14 +298,14 @@ label {
      font-family: 'Zen Kaku Gothic Antique', sans-serif;    
  }
  .Canciones{
-     left: 55%;
+     left: 60.5%;
      margin-top:0.6%;
      position: absolute;
      color: white;
      font-family: 'Zen Kaku Gothic Antique', sans-serif;    
  }
  .Albums{
-     left: 49%;
+     left: 53%;
      margin-top:0.6%;
      position: absolute;
      color: white;
@@ -840,3 +840,10 @@ p {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     
 }
+
+/* ----------- */
+#submitbtn{
+    top: 5%;
+    display:none;
+}
+/* ----------- */

@@ -5,6 +5,7 @@ urlpatterns = [
     path('configuracion/', views.configuracion_view, name="configuracion_view"),
     path('CRUD/<int:model_id>', views.crud_view, name="crud_view"),
     path('artistas/', views.artistas_view, name="artistas_view"),
+    path('canciones/', views.canciones_view, name="canciones_view"),
 
     path('add_canciones/', views.add_canciones_view, name="add_canciones_view"),
     path('add_artistas/', views.add_artistas_view, name="add_artistas_view"),
@@ -25,4 +26,6 @@ urlpatterns = [
     path('change_artista/<int:artista_id>', views.change_artista_view, name="change_artista_view"),
     path('change_album/<int:album_id>', views.change_album_view, name="change_album_view"),
     path('change_cancion/<int:cancion_id>', views.change_cancion_view, name="change_cancion_view"),
+    
+    path('busqueda/', views.busqueda_view, name="busqueda_view"),
 ]

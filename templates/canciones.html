@@ -1,0 +1,15 @@
+{% extends 'Home.html' %}
+
+{% block content %}
+<div class="texto9">
+    <h3>Canciones</h3>
+</div>
+<div class="cards">
+    {% for Cancion in canciones %}
+    <div>
+        <h5>Nombre: {{ Cancion.cancion }}<br>N. Reproducciones:  {{ Cancion.reproducciones}}<br>Duración:  {{ Cancion.duracion}} </h5>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
