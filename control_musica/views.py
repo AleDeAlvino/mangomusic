@@ -29,7 +29,9 @@ def add_canciones_view(request):
     if request.method == 'POST':
         print("holi")
         print("Es valido")
-        cancion = Canciones(fk_album=request.POST['fk_album'], fk_genero=request.POST['fk_genero'], cancion=request.POST['cancion'], reproducciones=request.POST['reproducciones'], duracion=request.POST['duracion'])
+        album = Albumes.objects.filter(pk=request.POST['fk_album']).first()
+        genero = Generos.objects.filter(pk=request.POST['fk_genero']).first()
+        cancion = Canciones(fk_album=album, fk_genero=genero, cancion=request.POST['cancion'], reproducciones=request.POST['reproducciones'], duracion=request.POST['duracion'])
         cancion.save()
     else:
         print("no entra")

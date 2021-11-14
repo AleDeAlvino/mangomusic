@@ -648,7 +648,7 @@ label {
 /* Change perfil */
 
 .input-perfil{
-    margin-left:300px;
+    margin-left:10px;
     margin-top: 6%; 
 }
 .input-perfil input[type="text"],
@@ -712,7 +712,7 @@ label {
 }
 .botton-3{
     margin: 4%;
-    padding-left:10%;
+    padding-left:15%;
 }
 .button1{
     left: 55%;
