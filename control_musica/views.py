@@ -11,8 +11,8 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import authenticate
 from django.contrib.auth import login
 from django.contrib.auth import logout
-# from .models import User
-# from .forms import 
+from .models import Generos, Artistas, Albumes, Canciones
+# from .forms import GenerosForm, ArtistaForm, AlbumesForm, CancionesForm
 
 # Create your views here.
 
@@ -26,18 +26,50 @@ def crud_view(request, model_id):
 
 @login_required
 def add_canciones_view(request):
+    if request.method == 'POST':
+        print("holi")
+        print("Es valido")
+        cancion = Canciones(fk_album=request.POST['fk_album'], fk_genero=request.POST['fk_genero'], cancion=request.POST['cancion'], reproducciones=request.POST['reproducciones'], duracion=request.POST['duracion'])
+        cancion.save()
+    else:
+        print("no entra")
+        print(request.method)
     return render(request, 'agregar_canciones.html')
 
 @login_required
 def add_artistas_view(request):
+    if request.method == 'POST':
+        print("holi")
+        print("Es valido")
+        artista = Artistas(artista=request.POST['artista'], seguidores=request.POST['seguidores'], verificacion=request.POST['verificacion'], foto=request.FILES['foto'])
+        artista.save()
+    else:
+        print("no entra")
+        print(request.method)
     return render(request, 'agregar_artistas.html')
 
 @login_required
 def add_albumes_view(request):
+    if request.method == 'POST':
+        print("holi")
+        print("Es valido")
+        album = Albumes(fk_artista=request.POST['fk_artista'], album=request.POST['album'], fecha=request.POST['fecha'], foto=request.FILES['foto'])
+        album.save()
+    else:
+        print("no entra")
+        print(request.method)
     return render(request, 'agregar_albumes.html')
 
 @login_required
 def add_generos_view(request):
+    if request.method == 'POST':
+        print("holi")
+        print("Es valido")
+        genero = Generos(genero=request.POST['genero'])
+        genero.save()
+    else:
+        print("no entra")
+        print(request.method)
     return render(request, 'agregar_generos.html')
 
 

@@ -1,0 +1,15 @@
+{% extends 'Home.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="mover-genero">
+        <label for="start">Escribe el genero de tu arista/grupo favorito</label>
+
+        <input type="text" name="genero" placeholder="Agregar el genero musical" />
+ 
+        <div class="botton-3">
+            <input type="submit" class="button1" value="Enviar">
+        </div>
+    </div>
+</form>
+{% endblock %}

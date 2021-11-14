@@ -2,8 +2,28 @@
 {% block content %}
     <div class="menu-agregar">
 
-        {% if model_id = 1 %}
+        <!-- Agregar -->
+
+        {% if model_id == 1 %}
         <div class="contenedor-menu-agregar" onclick="location.href = '/add_canciones'">
+            <p>Agregar</p>
+        </div>
+        {% endif %}
+
+        {% if model_id == 2 %}
+        <div class="contenedor-menu-agregar" onclick="location.href = '/add_artistas'">
+            <p>Agregar</p>
+        </div>
+        {% endif %}
+
+        {% if model_id == 3 %}
+        <div class="contenedor-menu-agregar" onclick="location.href = '/add_albumes'">
+            <p>Agregar</p>
+        </div>
+        {% endif %}
+
+        {% if model_id == 4 %}
+        <div class="contenedor-menu-agregar" onclick="location.href = '/add_generos'">
             <p>Agregar</p>
         </div>
         {% endif %}

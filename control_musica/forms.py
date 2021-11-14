@@ -6,7 +6,7 @@ class GenerosForm(forms.ModelForm):
 
     class Meta:
         model = Generos
-        fields=('genero')
+        fields=('genero',)
 
 class ArtistaForm(forms.ModelForm):
     """ Formulario para registrar un Artista """
