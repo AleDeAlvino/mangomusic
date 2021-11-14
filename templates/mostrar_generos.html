@@ -3,8 +3,8 @@
 {% for Genero in generos %}
 <div class="mostrar_generos">
 {{Genero.genero}}
-    <button type="button" onclick="location.href = '/change_genero/{{Genero.pk}}'"> Editar </button>
-    <button type="button" onclick="location.href = '/d_generos/{{Genero.pk}}'"> Eliminar </button>
+    <button type="button" onclick="location.href = '/change_genero/{{Genero.pk}}'"  class="mostrar-button"> Editar </button>
+    <button type="button" onclick="location.href = '/d_generos/{{Genero.pk}}'"  class="mostrar-button"> Eliminar </button>
 </div>
  
 

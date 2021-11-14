@@ -236,6 +236,11 @@ def canciones_view(request):
     return render(request, 'canciones.html', {'canciones':canciones})
 
 @login_required
+def generos_view(request):
+    generos = Generos.objects.all()
+    return render(request, 'generos.html', {'generos':generos})
+
+@login_required
 def busqueda_view(request):
     artista=None
     album=None
@@ -249,3 +254,18 @@ def busqueda_view(request):
         cancion = Canciones.objects.filter(cancion=request.POST['search']).first()
         print(cancion)
     return render(request, 'busqueda.html', {'artista':artista, 'album':album, 'cancion':cancion})
+
+@login_required
+def bal_canciones_view(request, id_album):
+    canciones = Canciones.objects.filter(fk_album=id_album)
+    return render(request, 'canciones.html', {'canciones':canciones})
+
+@login_required
+def bgen_canciones_view(request, id_genero):
+    canciones = Canciones.objects.filter(fk_genero=id_genero)
+    return render(request, 'canciones.html', {'canciones':canciones})
+
+@login_required
+def bar_albumes_view(request, id_artista):
+    albumes = Albumes.objects.filter(fk_artista=id_artista)
+    return render(request, 'albumes.html', {'albumes':albumes})

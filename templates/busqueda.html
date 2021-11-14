@@ -6,7 +6,7 @@
 </div>
 <div class="cards">
     {% if artista != None %}
-    <div>
+    <div onclick="location.href = '/bar_albumes/{{artista.pk}}'">
         <img src="{{ artista.foto.url }}" id="imagenes_musica">
         <h5>{{ artista.artista }}<br>N. Seguidores:  {{ artista.seguidores}}</h5>
     </div>
@@ -19,7 +19,7 @@
     {% endif %}
 
     {% if album != None %}
-    <div>
+    <div onclick="location.href = '/bal_canciones/{{album.pk}}'">
         <img src="{{ album.foto.url }}" id="imagenes_musica">
         <h5>{{ album.album }}<br> {{ album.fecha}}</h5>
     </div>

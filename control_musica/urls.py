@@ -6,6 +6,7 @@ urlpatterns = [
     path('CRUD/<int:model_id>', views.crud_view, name="crud_view"),
     path('artistas/', views.artistas_view, name="artistas_view"),
     path('canciones/', views.canciones_view, name="canciones_view"),
+    path('generos/', views.generos_view, name="generos_view"),
 
     path('add_canciones/', views.add_canciones_view, name="add_canciones_view"),
     path('add_artistas/', views.add_artistas_view, name="add_artistas_view"),
@@ -28,4 +29,8 @@ urlpatterns = [
     path('change_cancion/<int:cancion_id>', views.change_cancion_view, name="change_cancion_view"),
     
     path('busqueda/', views.busqueda_view, name="busqueda_view"),
+
+    path('bal_canciones/<int:id_album>', views.bal_canciones_view, name="bal_canciones_view"),
+    path('bgen_canciones/<int:id_genero>', views.bgen_canciones_view, name="bgen_canciones_view"),
+    path('bar_albumes/<int:id_artista>', views.bar_albumes_view, name="bar_albumes_view"),
 ]

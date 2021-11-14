@@ -3,8 +3,8 @@
 {% for Cancion in canciones %}
 <div class="mostrar_generos">
 {{Cancion.cancion}}
-    <button type="button" onclick="location.href = '/change_cancion/{{Cancion.pk}}'"> Editar </button>
-    <button type="button" onclick="location.href = '/d_canciones/{{Cancion.pk}}'"> Eliminar </button>
+    <button type="button" onclick="location.href = '/change_cancion/{{Cancion.pk}}'"  class="mostrar-button"> Editar </button>
+    <button type="button" onclick="location.href = '/d_canciones/{{Cancion.pk}}'"  class="mostrar-button"> Eliminar </button>
 </div>
  
 

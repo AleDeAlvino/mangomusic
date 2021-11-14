@@ -6,7 +6,7 @@
 </div>
 <div class="cards">
     {% for Artista in artistas %}
-    <div>
+    <div onclick="location.href = '/bar_albumes/{{Artista.pk}}'">
         <img src="{{ Artista.foto.url }}" id="imagenes_musica">
         <h5>{{ Artista.artista }}<br>N. Seguidores:  {{ Artista.seguidores}}</h5>
     </div>

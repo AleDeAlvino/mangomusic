@@ -52,6 +52,15 @@ def sign_in_view(request):
     form = ProfileForm()
     return render(request, 'Registro.html', {'form':form})
 
+def aboutUs_view(request):
+    return render(request, "AboutUs.html")
+
+def premium_view(request):
+    return render(request, "Premium.html")
+
+def soporte_view(request):
+    return render(request, "Soporte.html")
+
 @login_required
 def home_view(request):
     albumes = Albumes.objects.all()

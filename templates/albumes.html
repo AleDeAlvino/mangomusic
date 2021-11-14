@@ -6,7 +6,7 @@
 </div>
 <div class="cards">
     {% for Album in albumes %}
-    <div>
+    <div onclick="location.href = '/bal_canciones/{{Album.pk}}'">
         <img src="{{ Album.foto.url }}" id="imagenes_musica">
         <h5>{{ Album.album }}<br> {{ Album.fecha}}</h5>
     </div>

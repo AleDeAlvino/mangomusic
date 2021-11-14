@@ -1,0 +1,15 @@
+{% extends 'Home.html' %}
+
+{% block content %}
+<div class="texto9">
+    <h3>Generos</h3>
+</div>
+<div class="cards">
+    {% for Genero in generos %}
+    <div onclick="location.href = '/bgen_canciones/{{Genero.pk}}'">
+        <h5>{{ Genero.genero }}</h5>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
