@@ -53,7 +53,8 @@ def add_albumes_view(request):
     if request.method == 'POST':
         print("holi")
         print("Es valido")
-        album = Albumes(fk_artista=request.POST['fk_artista'], album=request.POST['album'], fecha=request.POST['fecha'], foto=request.FILES['foto'])
+        artista = Artistas.objects.filter(pk=request.POST['fk_artista']).first()
+        album = Albumes(fk_artista=artista, album=request.POST['album'], fecha=request.POST['fecha'], foto=request.FILES['foto'])
         album.save()
     else:
         print("no entra")
