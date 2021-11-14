@@ -108,3 +108,8 @@ def change_password_view(request):
     else:
         form = PasswordChangeForm(request.user)
     return render(request, 'change_password.html', {'form': form})
+
+@login_required
+def logout_view(request):
+    logout(request)
+    return redirect("login_view")
