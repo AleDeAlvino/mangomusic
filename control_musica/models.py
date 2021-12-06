@@ -10,7 +10,7 @@ class Artistas(models.Model):
     artista = models.CharField(max_length = 50)
     seguidores = models.IntegerField(default=0)
     verificacion = models.BooleanField(default=False)
-    foto = models.ImageField(upload_to='artistas/', default='albumes/default.jpg')
+    foto = models.ImageField(upload_to='artistas/', default='artistas/default.jpg')
     def __str__(self):
          return "{}".format(self.artista)
 
