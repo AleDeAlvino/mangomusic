@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
     'control_usuarios.apps.ControlUsuariosConfig',
     'control_musica.apps.ControlMusicaConfig',
 ]
@@ -125,7 +126,7 @@ STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-DEFAULT_FILE_STORAGE = 'backend.custom_azure.AzureMediaStorage'
+DEFAULT_FILE_STORAGE = 'mangomusic.custom_azure.AzureMediaStorage'
 MEDIA_LOCATION = "media"
 AZURE_ACCOUNT_NAME = "mangost"
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
