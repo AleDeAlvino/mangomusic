@@ -1,3 +1,4 @@
 django==2.2.5
 whitenoise
 django-storages[azure]
+mysqlclient
